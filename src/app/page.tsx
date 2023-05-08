@@ -4,7 +4,7 @@ export default function Home() {
       <div>
         <h2 className="text-4xl sm:text-2xl font-bold pb-2">Hi there,</h2>
         <h4 className="text pb-3">
-          I'm Daniel Currently my Portfolio is under construction <br /> Check
+          I`m Daniel Currently my Portfolio is under construction <br /> Check
           out my blogs till then ):
         </h4>
         <a
