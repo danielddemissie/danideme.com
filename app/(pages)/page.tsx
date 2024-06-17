@@ -37,7 +37,7 @@ export default function About() {
         <h1 className="font-semibold">
           Hi,{" "}
           <InlineLink href="https://twitter.com/danieldemeD">
-           I'm Daniel
+           I`m Daniel
           </InlineLink>
           !
         </h1>
