@@ -51,7 +51,7 @@ export default function About() {
             Posts
           </Link>
           ,{" "}
-          <InlineLink href="https://github.com/danielddemissie">projects</InlineLink>,
+          <InlineLink href="https://github.com/danielddemissie">Projects</InlineLink>,
           and various social media profiles.
         </p>
       </article>
