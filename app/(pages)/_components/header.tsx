@@ -1,35 +1,13 @@
 import Link from "next/link";
 import { NavLink } from "./nav-link";
-import { Twitter, Github } from "lucide-react";
-import { SocialLink } from "./social-link";
-
 
 
 const navItems = [
-  //   {
-  //     path: "/",
-  //     label: "Thoughts",
-  //   },
   {
     path: "/posts",
-    label: "Posts",
+    label: "My Posts",
   },
 ];
-
-const socialItems = [
-  {
-    path: "https://twitter.com/danieldemeD",
-    label: "Twitter",
-    icon: <Twitter size={18} />,
-  },
-  {
-    path: "https://github.com/danielddemissie",
-    label: "GitHub",
-    icon: <Github size={18} />,
-  },
-];
-
-
 
 export const Header = () => {
   return (
@@ -46,16 +24,7 @@ export const Header = () => {
             <NavLink key={item.path} path={item.path} label={item.label} />
           ))}
         </div>
-        <div className="flex items-center gap-4">
-          {socialItems.map((item) => (
-            <SocialLink
-              key={item.path}
-              path={item.path}
-              label={item.label}
-              icon={item.icon}
-            />
-          ))}
-        </div>
+
       </div>
     </header>
   );

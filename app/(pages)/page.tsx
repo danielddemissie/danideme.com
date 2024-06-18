@@ -1,6 +1,7 @@
 import Danideme from "@/public/images/danideme.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import TechStack from "./_components/tech-stack";
 
 
 
@@ -35,28 +36,29 @@ export default function About() {
       />
       <article className="mt-6 space-y-4 text-zinc-400">
         <h1 className="font-semibold">
-          Hi,{" "}
+          Hi there, I`m {" "}
           <InlineLink href="https://twitter.com/danieldemeD">
-           I`m Daniel 
+            Daniel
           </InlineLink>
           .
         </h1>
 
-        <p>
-        I am a software engineer specializing in <strong>Fullstack web developer</strong>.
-          To know me better, feel
-          free to explore my{" "}
+        <p>I am a software engineer, currently working as fullstack software engineer at <InlineLink href="https://phishfort.com">phishfort</InlineLink>.
+          While you are here , feel free to explore my{" "}
           <Link
             className="border-b border-dotted text-zinc-200 transition-colors hover:text-zinc-200/80"
             href="/posts"
           >
-            Posts
+            posts
           </Link>
           ,{" "}
-          <InlineLink href="https://github.com/danielddemissie">Projects</InlineLink>,
-          and various social media profiles.
+          <InlineLink href="https://github.com/danielddemissie">projects</InlineLink>
+          {" "} and social media profiles.
         </p>
+        <div className="py-2">
+          <TechStack />
+        </div>
       </article>
-    </div>
+    </div >
   );
 }
