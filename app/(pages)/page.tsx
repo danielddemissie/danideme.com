@@ -37,12 +37,14 @@ export default function About() {
         <h1 className="font-semibold">
           Hi,{" "}
           <InlineLink href="https://twitter.com/danieldemeD">
-           I`m Daniel
+           I`m Daniel 
           </InlineLink>
-          !
+          .
         </h1>
+
         <p>
-          For more information about my professional journey and interests, feel
+        I am a software engineer specializing in <strong>Fullstack web developer</strong>.
+          To know me better, feel
           free to explore my{" "}
           <Link
             className="border-b border-dotted text-zinc-200 transition-colors hover:text-zinc-200/80"
