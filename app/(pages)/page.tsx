@@ -55,9 +55,9 @@ export default function About() {
           <InlineLink href="https://github.com/danielddemissie">projects</InlineLink>
           {" "} and social media profiles.
         </p>
-        <div className="py-2">
+        {/* <div className="py-2">
           <TechStack />
-        </div>
+        </div> */}
       </article>
     </div >
   );
