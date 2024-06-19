@@ -1,9 +1,6 @@
 import Danideme from "@/public/images/danideme.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import TechStack from "./_components/tech-stack";
-
-
 
 interface InlineLinkProps {
   href: string;
@@ -23,7 +20,7 @@ const InlineLink = ({ href, children }: InlineLinkProps) => (
 
 
 
-export default function About() {
+export default function Home() {
   return (
     <div>
       <Image
@@ -55,9 +52,6 @@ export default function About() {
           <InlineLink href="https://github.com/danielddemissie">projects</InlineLink>
           {" "} and social media profiles.
         </p>
-        {/* <div className="py-2">
-          <TechStack />
-        </div> */}
       </article>
     </div >
   );

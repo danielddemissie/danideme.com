@@ -5,8 +5,12 @@ import { NavLink } from "./nav-link";
 const navItems = [
   {
     path: "/posts",
-    label: "My Posts",
+    label: "Posts",
   },
+  {
+    path: '/resume',
+    label: "Resume"
+  }
 ];
 
 export const Header = () => {
