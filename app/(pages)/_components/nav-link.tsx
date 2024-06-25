@@ -14,12 +14,13 @@ interface NavLinkProps {
 
 export const NavLink = ({ path, label }: NavLinkProps) => {
   const pathname = usePathname();
+  const shouldHighlight = pathname.includes(path)
 
   return (
     <Link
       href={path}
       className={`border-b border-dotted font-mono text-sm transition-colors hover:text-zinc-200/80
-      ${pathname === path ? "text-zinc-200" : "text-zinc-500"}
+      ${shouldHighlight ? "text-zinc-200" : "text-zinc-500"}
   `}
     >
       {label}
