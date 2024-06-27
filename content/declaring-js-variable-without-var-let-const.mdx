@@ -109,7 +109,9 @@ Now that we understand how JavaScript handle undeclared variables, it's always r
 <a  id="var"></a>
 
 Before `ES6` var was the only keyword available to create a variable, The scope of a variable declared with this keyword is its current execution context.
-This is either the enclosing function or for variables declared outside any function, global. Example :
+This is either the enclosing function or for variables declared outside any function the global context. 
+
+Example :
 
   
 
@@ -192,27 +194,7 @@ scope is bound to the block it was declared not the function it was declared. Ex
 ```js
 //Block scope:
 
-  
-console.log(name)
-
-let name =  "daniel"
-
-  
-
-/**
-
-* Output: RefrenceError: Cannot access 'name' before initalizing
-
-*
-
-* This is b/c javaScript will hoist variables declared with both
-
-* const and let but they will remain uninitialized.
-
-*/
-
-  
-
+   
 function  example(){
 
     // let use the above exmaple
@@ -245,6 +227,24 @@ function  example(){
 
 }
 
+console.log(name)
+
+let name =  "daniel"
+
+  
+
+/**
+
+* Output: RefrenceError: Cannot access 'name' before initalizing
+
+*
+
+* This is b/c javaScript will hoist variables declared with both
+
+* const and let but they will remain uninitialized.
+
+*/
+
 ```
 
   
@@ -258,7 +258,9 @@ function  example(){
   
 
 The const keyword is used to create `immutable variable` means variables whose value can not be reassigned or modified. Just like the let
-variable created with const are bound to the top block level context when hoisted. The most noticeable differences with let are
+variable created with const are bound to the top block level context when hoisted. 
+
+The two most noticeable differences with let and const are
 
 - const doesn't allow you to reassigned a variable.
 
