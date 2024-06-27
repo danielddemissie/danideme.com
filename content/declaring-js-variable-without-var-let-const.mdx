@@ -47,10 +47,7 @@ undeclaredVaribale="value"
 ```
 
 In JavaScript `undeclared variable` does not exist until we assign them a value (They are not hoisted unlike a declared variables), Therefor assigning a value to `an undeclared variable` implicitly creates it as a global variable
-
 when the assignment is executed. `This means all undeclared variables are global variables`. (This is also highly likely to mess up the global objects at both browser and back-end environment.)
-
-  
 
 To demonstrate this behavior, let's have a look at this example:
 
@@ -112,7 +109,6 @@ Now that we understand how JavaScript handle undeclared variables, it's always r
 <a  id="var"></a>
 
 Before `ES6` var was the only keyword available to create a variable, The scope of a variable declared with this keyword is its current execution context.
-
 This is either the enclosing function or for variables declared outside any function, global. Example :
 
   
@@ -189,7 +185,6 @@ example()
   
 
 The major upgrade from the var in `ES6's let` is it's `block scoped` not function scoped, what does this means? it means the variable's
-
 scope is bound to the block it was declared not the function it was declared. Example? Sure:
 
   
@@ -263,7 +258,6 @@ function  example(){
   
 
 The const keyword is used to create `immutable variable` means variables whose value can not be reassigned or modified. Just like the let
-
 variable created with const are bound to the top block level context when hoisted. The most noticeable differences with let are
 
 - const doesn't allow you to reassigned a variable.
