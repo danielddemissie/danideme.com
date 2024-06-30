@@ -4,6 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/components/mdx/mdx";
 import PostDate from "@/components/post-date";
+import { Share } from "../../_components/share";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -41,8 +42,10 @@ export default async function SinglePost({
   params: { slug: string };
 }) {
   const post = allPosts.find((post) => post.slug === params.slug);
+  const fullUrl = `https://danideme-com.vercel.app/posts/${params.slug}`;
 
   if (!post) notFound();
+  const { title } = post
 
   return (
     <article>
@@ -62,6 +65,7 @@ export default async function SinglePost({
             <span className="px-2">|</span>{" "}
             <PostDate dateString={post.publishedAt} />{" "}
           </div>
+          <Share url={fullUrl} title={title} />
           <Link
             href="/posts"
             className="ml-auto border-b border-dotted text-zinc-200 transition-colors hover:text-zinc-200/80"
