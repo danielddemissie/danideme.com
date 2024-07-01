@@ -6,8 +6,14 @@ import "./css/globals.css";
 import "react-medium-image-zoom/dist/styles.css";
 
 export const metadata: Metadata = {
-  title: "DaniDeme",
-  description: "Little things i know about the development",
+  title: "Daniel Demelash",
+  description: "Little things i know about software development",
+  openGraph: {
+    images: "https://danideme-com.vercel.app/images/danideme.jpg"
+  },
+  twitter: {
+    images: "https://danideme-com.vercel.app/images/danideme.jpg"
+  }
 };
 
 export default function RootLayout({

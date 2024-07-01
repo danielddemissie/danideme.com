@@ -12,10 +12,10 @@ interface ShareProps {
 interface ActionIconProps {
     title: string
     icon: React.ReactNode
-    action: Function
+    action?: Function
 }
 
-const ActionIcon = ({ icon, title, action }: ActionIconProps) =>
+const ActionIcon = ({ icon, title, action = () => { } }: ActionIconProps) =>
     <button title={`${title}`} onClick={(e) => { action() }}>
         {icon}
     </button>
@@ -31,9 +31,9 @@ export const Share = ({ url, title }: ShareProps) => {
 
     return (
         <div className="flex items-center gap-4">
-            <ActionIcon icon={copied ? <CopyCheck size={18} /> : <Copy size={18} />} action={copyFullLink} title={title} />
+            <ActionIcon icon={copied ? <CopyCheck size={18} /> : <Copy size={18} />} action={copyFullLink} title={"Copy Link"} />
             <TwitterShareButton url={`${url}`} title={`${title}\n`}>
-                <Twitter className="text-zinc-500 transition-colors hover:hover:text-zinc-200/80" size={18} />
+                <ActionIcon icon={<Twitter className="text-zinc-500 transition-colors hover:hover:text-zinc-200/80" size={18} />} title="Twitter" />
             </TwitterShareButton>
         </div>
     )
