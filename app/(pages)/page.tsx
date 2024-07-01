@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Danideme from "@/public/images/danideme.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,19 @@ interface InlineLinkProps {
   href: string;
   children: React.ReactNode;
 }
+
+
+export const metadata: Metadata = {
+  title: "Daniel Demelash",
+  description: "Little things i know about software development",
+  openGraph: {
+    images: "https://danideme-com.vercel.app/images/danideme.jpg"
+  },
+  twitter: {
+    images: "https://danideme-com.vercel.app/images/danideme.jpg"
+  }
+};
+
 
 const InlineLink = ({ href, children }: InlineLinkProps) => (
   <a

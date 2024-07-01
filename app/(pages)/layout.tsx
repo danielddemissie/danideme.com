@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Footer } from "./_components/footer";
 import { Header } from "./_components/header";
 import { LayoutTransition } from "./_components/layout-transition";
@@ -6,17 +5,6 @@ import { LayoutTransition } from "./_components/layout-transition";
 interface LayoutProps {
   children: React.ReactNode;
 }
-
-export const metadata: Metadata = {
-  title: "Daniel Demelash",
-  description: "Little things i know about software development",
-  openGraph: {
-    images: "https://danideme-com.vercel.app/images/danideme.jpg"
-  },
-  twitter: {
-    images: "https://danideme-com.vercel.app/images/danideme.jpg"
-  }
-};
 
 export default function Layout({ children }: LayoutProps) {
   return (
